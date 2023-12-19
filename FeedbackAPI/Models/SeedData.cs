@@ -2,6 +2,9 @@
 
 namespace FeedbackAPI.Models
 {
+    /// <summary>
+    /// Adds sample data to the database if its empty.
+    /// </summary>
     public  static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
