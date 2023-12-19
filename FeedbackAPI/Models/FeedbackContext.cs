@@ -6,17 +6,10 @@ namespace FeedbackAPI.Models
     {
         public DbSet<Feedback> Feedbacks { get; set; }
 
-
-        protected readonly IConfiguration Configuration;
-        public FeedbackContext(IConfiguration configuration)
+        public FeedbackContext(DbContextOptions<FeedbackContext> options)
+        : base(options)
         {
-            Configuration = configuration;
-        }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            // Connect to SQL database
-            options.UseSqlServer(Configuration.GetConnectionString("Feedbank"));
         }
     }
 }

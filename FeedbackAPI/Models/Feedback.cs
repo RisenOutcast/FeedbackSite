@@ -13,6 +13,8 @@ namespace FeedbackAPI.Models
         [Required]
         public string Email { get; set; }
         [Required]
-        public string Message { get; set; }
+        public int Score { get; set; } // 1-5
+        [Required]
+        public string? Message { get; set; }
     }
 }
