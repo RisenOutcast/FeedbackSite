@@ -22,7 +22,7 @@ namespace FeedbackAPI.Controllers
         [HttpGet("")]
         public ActionResult<List<Feedback>> GetFeedbacks(int offset = 0, int limit = 25)
         {
-            var feedbacks = feedbackContext.Feedbacks.OrderBy(x => x.Created).Skip(offset).Take(limit).AsQueryable();
+            var feedbacks = feedbackContext.Feedbacks.OrderBy(feedback => feedback.Created).Skip(offset).Take(limit).AsQueryable();
             return feedbacks.ToList();
         }
 
@@ -34,8 +34,8 @@ namespace FeedbackAPI.Controllers
         [HttpPost("")]
         public ActionResult<object> AddFeedback(Feedback feedback)
         {
-            // Check that the user gave a name
-            if (feedback.Name == "")
+            // Check that the user gave values
+            if (feedback.Name == "" || feedback.Email == "" || feedback.Score == 0)
                 return BadRequest();
 
             // Set creation time to now
@@ -45,8 +45,7 @@ namespace FeedbackAPI.Controllers
             feedbackContext.Feedbacks.Add(feedback);
             feedbackContext.SaveChanges();
 
-            // Return the generated id (primary key) to the user
-            return new { id = feedback.Id };
+            return CreatedAtAction("GetFeedbackById", new { id = feedback.Id }, feedback);
         }
 
         /// <summary>
