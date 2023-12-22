@@ -1,0 +1,84 @@
+.feedbackContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.feedbackItem {
+    width: 25rem;
+    min-height: 5rem;
+    height: fit-content;
+    padding: 1rem;
+    background-color: hsla(0, 0%, 47%, 0.326);
+    border-radius: 1rem;
+    color: azure;
+    font-family: 'Fira Code';
+    text-align: left;
+    border: solid 0.2rem rgba(240, 255, 255, 0.6);
+    animation: 1s ease-out 0s 1 slideIn;
+    transition: transform .2s;
+}
+
+.feedbackItem:hover {
+    transform: scale(1.05);
+  }
+
+.feedbackItem-top {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedbackItem-bottom {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(94, 94, 94, 0.546);
+    min-height: 5rem;
+    height: fit-content;
+    border-radius: 1rem;
+    font-family: Verdana;
+}
+
+.feedbackItem-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.feedbackItem-info svg {
+    filter: invert();
+    z-index: 1;
+}
+
+.feedbackContainer h3, .feedbackContainer h2 {
+    line-height: 0 !important;
+}
+
+.feedbackItem p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.feedbackItem-footer {
+    padding-top: 1rem;
+}
+
+.feedbackItem-subject {
+    text-align: center;
+    margin: 2rem;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

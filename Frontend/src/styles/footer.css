@@ -1,0 +1,42 @@
+.footer {
+    left: 0;
+    width: 100%;
+    min-height: 15rem;
+    padding-top: 4rem;
+    padding-bottom: 12rem;
+    color: white;
+    text-align: left;
+    bottom: 0;
+    border-top:solid azure 0.1rem;
+    background-color: var(--mainBlue);
+}
+
+.footer h1, .footer p, .footer i {
+    text-align: center;
+}
+
+.footer .slogan {
+    font-style: italic;
+    margin-bottom: 5rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    max-width: 110rem;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+.footer-item {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}

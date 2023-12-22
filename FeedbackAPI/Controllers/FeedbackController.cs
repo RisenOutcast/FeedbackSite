@@ -49,6 +49,11 @@ namespace FeedbackAPI.Controllers
             if (feedback.Name == "" || feedback.Email == "" || feedback.Score == 0)
                 return BadRequest();
 
+            // Check if a identical feedback already exists
+            bool doesExists = feedbackContext.Feedbacks.Any(_feedback => _feedback.Name == feedback.Name && _feedback.Subject == feedback.Subject && _feedback.Score == feedback.Score);
+            if (doesExists)
+                return Conflict();
+
             // Set creation time to now
             feedback.Created = DateTime.Now;
 

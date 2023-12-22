@@ -1,0 +1,187 @@
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    border-bottom:solid azure 0.1rem;
+  }
+
+.navbarTitle {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.bannerTitle {
+    top: -10px;
+    background-color: var(--mainBlue);
+    top: 0;
+    z-index: 99;
+    padding-top: 2rem;
+}
+
+.bannerTitle a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bannerTitle h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.6rem;
+    font-family: 'Fira Code';
+    color: azure;
+    text-align: center;
+}
+
+.navbar {
+    background-color: var(--mainBlue);
+    padding: 0.1rem;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    color: whitesmoke;
+}
+
+.navbar h2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.navbar nav {
+    height: 4rem;
+    margin-top: 2rem;
+}
+
+.navbar svg {
+    height: 3rem;
+    margin-left: 1rem;
+    margin-top: 0.7rem;
+    filter: invert();
+}
+
+.navbarTitle {
+    display: flex;
+}
+
+.navbarItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navElement {
+    color: whitesmoke;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.navElement svg {
+    height: 1.5rem;
+    vertical-align: text-bottom;
+}
+
+.navElement:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.navElementRight:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.hamburger-button-container {
+    position: fixed;
+    top: 0rem;
+    right: 2rem;
+    z-index: 99;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert();
+  }
+  
+  .activate-nav-button,
+  .deactivate-nav-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 99;
+    background-color: #00000000;
+    border: 0rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .activate-nav-button svg,
+  .deactivate-nav-button svg {
+    z-index: 99;
+    height: 3rem;
+    width: 3rem;
+    filter: invert();
+  }
+
+  /* Mobile responsivess */
+@media screen and (max-width: 1200px) {
+
+    .bannerTitle {
+        visibility: hidden;
+    }
+
+    .navbar {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        background-color: rgb(14, 14, 14);
+    }
+
+    .navbar nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .navbarTitle {
+        top: 0;
+        z-index: 99;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        padding-top: 2rem;
+        visibility: visible;
+        height: auto;
+        width: auto;
+    }
+
+    .navbarItems {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navElement {
+        padding-top: 1rem;
+    }
+
+    .activate-nav-button,
+    .deactivate-nav-button {
+      display: block;
+    }
+  
+  }
+
+  @media screen and (max-width: 700px) {
+    .navbar nav {
+        align-items: start;
+    }
+  }

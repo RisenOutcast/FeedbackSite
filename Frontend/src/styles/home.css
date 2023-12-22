@@ -1,0 +1,41 @@
+.homeInfoContainer {
+    width: 47rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exampleHolder {
+    display: flex;
+    gap: 9rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.exampleHolder-Text h2 {
+    width: 25rem;
+}
+
+.feedbackCountHolder {
+    margin-top: 5rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem;
+    background-color: rgba(30, 65, 134, 0.653);;
+}
+
+.feedbackCountHolder h1 {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 0 !important
+}
+
+.feedbackCount {
+    font-size: 3rem !important;
+}
+
+.submitPageButton {
+    width: 35rem;
+    height: 5rem;
+    font-size: 2rem;
+}

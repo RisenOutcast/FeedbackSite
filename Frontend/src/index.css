@@ -1,0 +1,17 @@
+:root {
+  background-color: rgb(15, 15, 15);
+
+  --mainBlue: rgb(35, 42, 56);
+  --pageBackground: #191919;
+  --buttonViolet: rgb(67, 67, 108);
+}
+
+body {
+  margin: 0;
+  font-family: 'Fira Code', Verdana;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
