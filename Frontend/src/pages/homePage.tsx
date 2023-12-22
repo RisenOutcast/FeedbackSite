@@ -6,7 +6,7 @@ import { API_URL, ENDPOINTS } from "../api";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const testData: feedbackData = {
+const exampleData: feedbackData = {
   id: 0,
   created: new Date("2023-12-21 12:29:49.3349291"),
   name: "Feedbacker",
@@ -68,7 +68,7 @@ const HomePage = () => {
           <h2>Have your opinion displayed in this fashion!</h2>
           <h2>Give us your opinion on anything!</h2>
         </div>
-        <FeedbackItem feedback={testData} />
+        <FeedbackItem feedback={exampleData} />
       </div>
     </div>
   );

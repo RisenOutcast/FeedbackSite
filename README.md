@@ -1,15 +1,22 @@
 # FeedbackSite
+Application for a site that hosts feedbacks on any subjects, built using ASP.NET Core and React. 
 
 ## How to run?
+The application uses ports 7000 (Client), 7001 (Backend, Https), 7002 (Backend, Http)
+
 ### API
-Runnable standalone (Does not require .NET 6 installation!) executable can be downloaded **[here](https://github.com/RisenOutcast/FeedbackSite/releases)**, run the .exe and close with Ctrl+C.
-Otherwise, you can build it yourself using Visual Studio or .NET CLI
+Build the solution using Visual Studio or .NET CLI.
 
 ### Frontend
-Lorem ipsum
+Navigate to `Frontend`.
+
+run `npm install`.
+
+run `npm start`.
 
 ## API Guide
 ### Prerequisite
+
  1. If you are **not** using the standalone executable: Have .NET 6 installed.
 
  1. Have a Microsoft SQL Server installed. I used Microsoft SQL Server 2022 Express, which can be downloaded [here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
@@ -38,6 +45,7 @@ Example of the data you'll receive:
   "created": "2023-12-20T00:53:21.8292779",
   "name": "Testinen",
   "email": "testi.testinen@testi.com",
+  "subject": "testing",
   "score": 5,
   "message": "This is testi"
 }

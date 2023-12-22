@@ -96,10 +96,6 @@ const Navbar = () => {
                   Home
                 </Link>
 
-                <Link className="navElement" to="/about">
-                  About
-                </Link>
-
                 <Link className="navElement" to="/contact">
                   Contact
                 </Link>
