@@ -1,11 +1,15 @@
-# FeedbackSite
+# Feedback Site
 Application for a site that hosts feedbacks on any subjects, built using ASP.NET Core and React. 
 
 ## How to run?
 The application uses ports 7000 (Client), 7001 (Backend, Https), 7002 (Backend, Http)
 
 ### API
+Follow the guide.
+
 Build the solution using Visual Studio or .NET CLI.
+
+First run adds some example data to the database.
 
 ### Frontend
 Navigate to `Frontend`.
@@ -17,7 +21,7 @@ run `npm start`.
 ## API Guide
 ### Prerequisite
 
- 1. If you are **not** using the standalone executable: Have .NET 6 installed.
+ 1. Have .NET 6 and Visual Studio installed.
 
  1. Have a Microsoft SQL Server installed. I used Microsoft SQL Server 2022 Express, which can be downloaded [here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 
@@ -69,5 +73,21 @@ Example of the data:
 
 by DELETE to the `/Feedback/{id}` which deletes the feedback with the specified id.
 
+## Frontend Guide
+### Prerequisite
+Have Node.js installed.
+
+### Features
+Website features a homepage where you can see how many feedbacks are currently in the database, from there you can navigate to add your own feedback.
+
+Feedbacks page holds all the feedbacks and you can read through them.
+
 ## Azure
 ### How would I host this project in Azure?
+Database can be pretty painlessly replaced with [Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database).
+
+The API can be published to [Azure API Management](https://azure.microsoft.com/en-us/products/api-management) and [Azure App Service](https://azure.microsoft.com/en-us/products/app-service).
+
+The frontend can be deployed to [Azure Static Web Apps](https://azure.microsoft.com/en-us/products/app-service/static).
+
+Some adjustments are necessary for deploying the whole project to Azure, like URI's and ports for example. 
