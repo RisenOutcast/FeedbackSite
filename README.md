@@ -1,5 +1,5 @@
 # Feedback Site
-Application for a site that hosts feedbacks on any subjects, built using ASP.NET Core and React. 
+Application for a site that hosts feedbacks on any subjects, built using ASP.NET Core and React. Previews can be found at the bottom.
 
 ## How to run?
 The application uses ports 7000 (Client), 7001 (Backend, Https), 7002 (Backend, Http)
@@ -91,3 +91,8 @@ The API can be published to [Azure API Management](https://azure.microsoft.com/e
 The frontend can be deployed to [Azure Static Web Apps](https://azure.microsoft.com/en-us/products/app-service/static).
 
 Some adjustments are necessary for deploying the whole project to Azure, like URI's and ports for example. 
+
+## Previews
+
+![Preview of frontpage](/preview1.png)
+![Preview of feedbacks](/preview2.png)
