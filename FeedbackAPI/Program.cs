@@ -21,6 +21,12 @@ using (var scope = app.Services.CreateScope())
     SeedData.Initialize(services);
 }
 
+// Cors for the client
+app.UseCors(options =>
+options.WithOrigins("http://localhost:7000", "http://localhost:7002") 
+.AllowAnyMethod()
+.AllowAnyHeader());
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

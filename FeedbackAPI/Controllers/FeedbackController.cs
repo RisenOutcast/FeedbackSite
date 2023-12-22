@@ -27,6 +27,17 @@ namespace FeedbackAPI.Controllers
         }
 
         /// <summary>
+        /// Get max number of items in database.
+        /// </summary>
+        /// <returns>The number of items</returns>
+        [HttpGet("Amount")]
+        public int GetMaxFeedbacksNumber()
+        {
+            var MaxAmount = feedbackContext.Feedbacks.Count();
+            return MaxAmount;
+        }
+
+        /// <summary>
         /// For adding new feedback entries to the database.
         /// </summary>
         /// <param name="feedback">Feedback model</param>
